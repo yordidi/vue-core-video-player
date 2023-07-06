@@ -7,7 +7,9 @@ const globalLocale = {
   'jp': jpLocale,
   'en': enLocale
 }
-
+/*
+ * 2个作用，一个设置lang，一个根据expression查寻可供替换的lang文件
+ **/
 const i18n = {
   t: (keyStr, defaultVal) => {
     const keys = keyStr.split('.')
