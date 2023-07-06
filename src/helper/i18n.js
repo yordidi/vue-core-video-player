@@ -14,6 +14,7 @@ const i18n = {
     const length = keys.length
     let last = i18n.locale
     for (let i = 0; i < length; i++) {
+      // 判断实例上是否存在某个属性
       if (last.hasOwnProperty(keys[i])) {
         last = last[keys[i]]
       }
