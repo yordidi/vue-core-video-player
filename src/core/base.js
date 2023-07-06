@@ -117,6 +117,7 @@ class BaseVideoCore {
     if (this.config.autoplay && !isMobile) {
       const _autoPlayFn = () => {
         const promise = this.play()
+        // 这里用状态机
         this.autoPlayPolicy(promise)
       }
       _autoPlayFn()
@@ -418,7 +419,7 @@ class BaseVideoCore {
       }
     })
   }
-
+  // 这个不错，状态机
   autoPlayPolicy (promise) {
     if (promise !== undefined) {
       promise.catch((error) => {
